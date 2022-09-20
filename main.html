@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농사서버 구매 - V1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <form action="https://sheetdb.io/api/v1/voj0pn9w9czb2" method="post", id="sheetdb-form">
+        <div class="container">
+          <h1>농사서버 구매</h1>
+          <p>※ 주의! 구매를 진행할 경우 농사서버 약관에 동의하는 것으로 간주됩니다 ※ <a href="rule.html">약관 보기</a></p>
+          <hr>
+          <label for="name"><b>이름 (닉네임도 가능)</b></label>
+          <input type="text" placeholder="이름 (닉네임)" name="data[name]" id="name" required>
+
+          <label for="phonenumber"><b>전화번호 (없으면 쓰지 마세요)</b></label>
+          <input type="text" placeholder="전화번호 ex) 010-1234-5678" name="data[phonenumber]" id="phonenumber" required>
+      
+          <label for="email"><b>이메일 (전화번호 썼으면 X)</b></label>
+          <input type="text" placeholder="이메일 ex) helloworld@cruise.kro.kr" name="data[email]" id="email" required>
+      
+          <label for="nickname"><b>마크 닉네임 (엑박 로그인 했으면 더 좋음)</b></label>
+          <input type="text" placeholder="마크 닉네임" name="data[nickname]" id="nickname" required>
+          
+          
+          <button type="submit" class="nextbtn">다음</button>
+        </div>
+      </form>
+        <script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('form-2.html', '_blank');
+
+          });
+        });
+        </script>
+
+      
+</body>
+</html>

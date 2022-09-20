@@ -1,0 +1,38 @@
+* {box-sizing: border-box}
+
+.container {
+  padding: 20px;
+  margin: 5em;
+  background-color: white;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.nextbtn {
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 22px;
+  border-radius: 20px;
+  border: none;
+}
+
+body {
+  background-color: #404040;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
